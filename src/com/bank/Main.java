@@ -7,8 +7,8 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
-		Bank bank = new Bank();
-
+		RBI rbi = new ICICI();
+		
 		System.out.println("Welcome I&G Banking System");
 		System.out.println("Please choose your bank");
 		System.out.println("1.ICICI");
@@ -20,19 +20,19 @@ public class Main {
 		int selectedValue = scanner.nextInt();
 		
 		switch(selectedValue) {
-			case 1: bank.setBankName("ICICI");
+			case 1: 
 			break;
-			case 2: bank.setBankName("SBI");
-			break;
-			case 3: bank.setBankName("Axis");
-			break;
-			case 4: bank.setBankName("HDFC");
-			break;
+//			case 2: bank.setBankName("SBI");
+//			break;
+//			case 3: bank.setBankName("Axis");
+//			break;
+//			case 4: bank.setBankName("HDFC");
+//			break;
 		}
 		
-		System.out.println("Thank you for choosing " + bank.getBankName());
-		
-		System.out.println("Welcome to "+ bank.getBankName() +" dashboard");
+//		System.out.println("Thank you for choosing " + bank.getBankName());
+//		
+//		System.out.println("Welcome to "+ bank.getBankName() +" dashboard");
 		
 		selectedValue = 0;
 	    int amount;
@@ -49,21 +49,21 @@ public class Main {
 			
 			switch(selectedValue) {
 				case 1:
-					System.out.println("Your current balance is " + bank.getBalance());
+					//System.out.println("Your current balance is " + bank.getBalance());
 					break;
 					
 				case 2: 
 					System.out.println("Enter the amount to add : ");
 					amount =  scanner.nextInt();
-					bank.addAmount(amount);
-					System.out.println("Your current balance is "+bank.getBalance());
+					rbi.addAmount(amount);
+					System.out.println("Your current balance is "+rbi.getBalance());
 					break;
 					
 				case 3: 
 					System.out.println("Enter the amount to withdraw");
 					amount =  scanner.nextInt();
-					bank.withdrawAmount(amount);
-					System.out.println("Your current balance is " + bank.getBalance());
+					rbi.withdrawAmount(amount);
+					System.out.println("Your current balance is " + rbi.getBalance());
 					break;
 					
 				case 4:
