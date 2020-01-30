@@ -14,7 +14,7 @@ public abstract class WrittenItem extends Item {
 	@Override
 	public void print() {
 		super.print();
-		System.out.println("Author :" + author);
+		System.out.println("Author :" + getAuthor());
 	}
 	
 	@Override

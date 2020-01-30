@@ -11,6 +11,22 @@ public class CD  extends MediaItem{
 		super();
 	}
 
+	@Override
+	public void print() {
+		super.print();
+		System.out.println("Director :" + getArtist());
+		System.out.println("Genre :" + getGenre());
+	}
+
+	@Override
+	public void addItem(Scanner scanner) {
+		super.addItem(scanner);
+		System.out.println("Enter the Artist name");
+		setArtist(scanner.next());
+		System.out.println("Enter the Genre name");
+		setGenre(scanner.next());
+	}
+	
 	public String getArtist() {
 		return artist;
 	}
@@ -26,14 +42,5 @@ public class CD  extends MediaItem{
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-
-	@Override
-	public void addItem(Scanner scanner) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
 	
 }

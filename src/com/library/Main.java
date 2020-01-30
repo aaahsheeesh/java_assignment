@@ -19,13 +19,9 @@ public class Main {
 		switch(choice) {
 		case 1: 
 			item = new Book();
-			item.addItem(scanner);
-			item.print();
 			break;
 		case 2:
 			item = new Journal();
-			item.addItem(scanner);
-			item.print();
 			break;
 		case 3:
 			item = new CD();
@@ -34,6 +30,9 @@ public class Main {
 			item = new Video();
 			break;
 		}
+		
+		item.addItem(scanner);
+		item.print();
 	
 		scanner.close();
 

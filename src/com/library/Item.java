@@ -14,18 +14,18 @@ public abstract class Item {
 	}
 	
 	public void addItem(Scanner scanner) {
-		 System.out.println("Enter the book ID");
+		 System.out.println("Enter the item ID");
 		 setUniqueId(scanner.nextInt());
-		 System.out.println("Enter the book name");
+		 System.out.println("Enter the item name");
 		 setName(scanner.next());
 		 System.out.println("Enter the No of Copies");
 		 setNumberOfCopies(scanner.nextInt());
 	};
 	
 	public void print() {	
-		System.out.println("Id :" + uniqueId );
-		System.out.println("Name :" + name);
-		System.out.println("No of Copies :" + numberOfCopies );
+		System.out.println("Id :" + getUniqueId() );
+		System.out.println("Name :" + getName());
+		System.out.println("No of Copies :" + getNumberOfCopies() );
 	};
 
 	public int getUniqueId() {

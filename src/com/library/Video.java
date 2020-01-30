@@ -13,6 +13,27 @@ public class Video extends MediaItem {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public void print() {
+		super.print();
+		System.out.println("Director :" + getDirector());
+		System.out.println("Genre :" + getGenre());
+		System.out.println("Year :" + getYear());
+
+	}
+	
+	@Override
+	public void addItem(Scanner scanner) {
+		super.addItem(scanner);
+		System.out.println("Enter the Director name");
+		setDirector(scanner.next());
+		System.out.println("Enter the Genre name");
+		setGenre(scanner.next());
+		System.out.println("Enter the Year");
+		setYear(scanner.nextInt());
+	}
+	
+	
 	public String getDirector() {
 		return director;
 	}
@@ -35,15 +56,5 @@ public class Video extends MediaItem {
 
 	public void setYear(int year) {
 		this.year = year;
-	}
-
-	@Override
-	public void addItem(Scanner scanner) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
-	
+	}	
 }
