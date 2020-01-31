@@ -5,7 +5,7 @@ import java.util.Scanner;
 public abstract class Item {
 
 	private int uniqueId;
-	private String name;
+	private String title;
 	private int numberOfCopies;
 
 	
@@ -24,15 +24,15 @@ public abstract class Item {
 	public void addItem(Scanner scanner) {
 		 System.out.println("Enter the item ID");
 		 setUniqueId(scanner.nextInt());
-		 System.out.println("Enter the item name");
-		 setName(scanner.next());
+		 System.out.println("Enter the item title");
+		 setTitle(scanner.next());
 		 System.out.println("Enter the No of Copies");
 		 setNumberOfCopies(scanner.nextInt());
 	};
 	
 	public void print() {	
 		System.out.println("Id :" + getUniqueId() );
-		System.out.println("Name :" + getName());
+		System.out.println("title :" + getTitle());
 		System.out.println("No of Copies :" + getNumberOfCopies() );
 	};
 
@@ -44,12 +44,12 @@ public abstract class Item {
 		this.uniqueId = uniqueId;
 	}
 	
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public int getNumberOfCopies() {
