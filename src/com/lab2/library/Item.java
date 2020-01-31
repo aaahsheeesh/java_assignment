@@ -1,4 +1,4 @@
-package com.library;
+package com.lab2.library;
 
 import java.util.Scanner;
 
@@ -11,6 +11,14 @@ public abstract class Item {
 	
 	public Item() {
 		super();
+	}
+	
+	public void checkIn() {
+		this.numberOfCopies +=1;
+	}
+	
+	public void checkOut() {
+		this.numberOfCopies -=1;
 	}
 	
 	public void addItem(Scanner scanner) {
