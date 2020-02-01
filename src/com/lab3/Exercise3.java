@@ -13,12 +13,13 @@ public class Exercise3 {
 			str = s.reverse().toString();
 			number[i] = Integer.parseInt(str);
 		}
-
+		
+		Arrays.parallelSort(number);
 		return number;
 	}
 
 	public static void main(String[] args) {
-		int[] number = { 25, 456, 258, 7808};
+		int[] number = { 999, 456, 258, 7808};
 		System.out.println(Arrays.toString(getSorted(number)));
 	}
 
