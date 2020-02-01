@@ -26,8 +26,7 @@ public abstract class Item {
 		 setUniqueId(scanner.nextInt());
 		 System.out.println("Enter the item title");
 		 setTitle(scanner.next());
-		 System.out.println("Enter the No of Copies");
-		 setNumberOfCopies(scanner.nextInt());
+		 numberOfCopies++;
 	};
 	
 	public void print() {	

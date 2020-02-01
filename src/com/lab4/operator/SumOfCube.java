@@ -20,5 +20,6 @@ public class SumOfCube {
 		System.out.println("Enter the number : ");
 		int number = scanner.nextInt();
 		System.out.println("Sum of Cube of "+ number +" = "+sumOfCubes(number));
+		scanner.close();
 	}
 }
