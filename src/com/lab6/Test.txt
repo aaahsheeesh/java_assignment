@@ -1,0 +1,2 @@
+This is a text file.
+Read this file from Java Code.
