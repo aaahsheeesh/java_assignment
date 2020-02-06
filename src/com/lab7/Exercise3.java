@@ -1,19 +1,19 @@
-package com.lab3;
+package com.lab7;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Exercise3 {
 
-	public static int[] getSorted(int[] number) {
+	public static HashMap<Integer, Integer> getValues(int[] numbers) {
 
-		for (int i = 0; i < number.length; i++) {
-			StringBuilder str = new StringBuilder(Integer.toString(number[i]));
-			number[i] = Integer.parseInt(str.reverse().toString());
+		HashMap<Integer, Integer> squareNumberMap = new HashMap<>();
+		for (int i = 0; i < numbers.length; i++) {
+			if (!squareNumberMap.containsKey(numbers[i]))
+				squareNumberMap.put(numbers[i], (int) Math.pow(numbers[i], 2));
 		}
 
-		Arrays.parallelSort(number);
-		return number;
+		return squareNumberMap;
 	}
 
 	public static void main(String[] args) {
@@ -26,12 +26,11 @@ public class Exercise3 {
 			for (int i = 0; i < size; i++) {
 				numbers[i] = scanner.nextInt();
 			}
-			System.out.println("Number after sort : " + Arrays.toString(getSorted(numbers)));
+			HashMap<Integer, Integer> squareNumberMap = getValues(numbers);
+			System.out.println(squareNumberMap);
 		}else {
 			System.out.println("Invalid array size ");
 		}
-		
 		scanner.close();
 	}
-
 }

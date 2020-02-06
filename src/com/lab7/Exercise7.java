@@ -1,9 +1,9 @@
-package com.lab3;
+package com.lab7;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exercise3 {
+public class Exercise7 {
 
 	public static int[] getSorted(int[] number) {
 
@@ -33,5 +33,4 @@ public class Exercise3 {
 		
 		scanner.close();
 	}
-
 }

@@ -1,9 +1,9 @@
-package com.lab3;
+package com.lab7;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exercise1 {
+public class Exercise5 {
 
 	public static int getSecondSmallest(int[] arr) {
 		Arrays.sort(arr);
@@ -26,6 +26,7 @@ public class Exercise1 {
 		} else {
 			System.out.println("Invalid array size");
 		}
-
+		
+		scanner.close();
 	}
 }

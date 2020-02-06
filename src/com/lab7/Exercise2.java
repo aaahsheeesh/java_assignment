@@ -1,10 +1,10 @@
-package com.lab3;
+package com.lab7;
 
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.Map.Entry;
+import java.util.Scanner;
 
-public class Exercise4 {
+public class Exercise2 {
 
 	public static void countChar(char[] ch) {
 		HashMap<Character, Integer> mapKey = new HashMap<>();
