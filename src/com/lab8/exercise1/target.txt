@@ -1,0 +1,2 @@
+Hi this is a file which is to read by file input stream.
+Then this file is copied to target file.

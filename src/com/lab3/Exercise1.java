@@ -27,5 +27,6 @@ public class Exercise1 {
 			System.out.println("Invalid array size");
 		}
 
+		scanner.close();
 	}
 }

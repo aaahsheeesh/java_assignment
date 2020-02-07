@@ -1,11 +1,8 @@
 package com.lab6;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Exercise6 {
 	public static void main(String args[]) {
@@ -14,12 +11,10 @@ public class Exercise6 {
 			int chars = 0;
 			int words = 0;
 
-			FileInputStream file = new FileInputStream(
+			FileInputStream readFile = new FileInputStream(
 					"D:\\capgemini\\Programs\\java_assignment\\src\\com\\lab6\\Test.txt");
-			DataInputStream dataInputStream = new DataInputStream(file);
-			BufferedReader br = new BufferedReader(new InputStreamReader(dataInputStream));
 			int i;
-			while ((i = br.read()) != -1) {
+			while ((i = readFile.read()) != -1) {
 				char data = (char) i;
 				if (data == '\n') {
 					lines++;
@@ -29,7 +24,7 @@ public class Exercise6 {
 				}
 				chars++;
 			}
-			file.close();
+			readFile.close();
 			System.out.println("No.of characters = " + chars);
 			System.out.println("No.of words = " + (words + 1));
 			System.out.println("No.of lines = " + (lines + 1));
