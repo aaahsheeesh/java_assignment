@@ -1,5 +1,17 @@
 package com.lab8;
 
-public class Exercise2 {
+class Timer implements Runnable{
 
+	@Override
+	public void run() {
+		
+	}
+	
+}
+
+public class Exercise2  {
+
+	public static void main(String[] args) {
+		
+	}
 }
