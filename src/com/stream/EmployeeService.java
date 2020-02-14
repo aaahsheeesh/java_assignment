@@ -1,6 +1,8 @@
-package com.lab11.stream;
+package com.stream;
 
 import java.time.LocalDate;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeeService {
 	private EmployeeRepository repository;
@@ -46,4 +48,13 @@ public class EmployeeService {
 						employee.getLastName() + " joined on " + employee.getHireDate().getDayOfWeek());
 		});
 	}
+	
+	public void getHighestCountDeparment() {
+	
+		Map<Department, Long> depMap = repository.getEmployeeData().stream().
+				collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()));
+		System.out.println( depMap.entrySet().stream().
+				max((entry1,entry2) -> entry1.getValue() > entry2.getValue()?1:-1).toString());
+	}
+
 }

@@ -1,4 +1,4 @@
-package com.lab11.stream;
+package com.stream;
 
 import java.time.LocalDate;
 

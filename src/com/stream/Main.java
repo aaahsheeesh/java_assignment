@@ -1,4 +1,4 @@
-package com.lab11.stream;
+package com.stream;
 
 public class Main {
 
@@ -6,7 +6,7 @@ public class Main {
 		
 		EmployeeService service = new EmployeeService();
 		//System.out.println("Sum of all Salaries : " + service.sumSalary());
-		service.getDayOfWeekOfEmployee();	
+		service.getHighestCountDeparment();	
 	}
 
 }

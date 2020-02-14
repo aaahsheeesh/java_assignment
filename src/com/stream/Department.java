@@ -1,4 +1,4 @@
-package com.lab11.stream;
+package com.stream;
 
 public class Department {
 
@@ -16,6 +16,12 @@ public class Department {
 
 	public Department() {
 		super();
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Department Name :" + getDepartmentName();
 	}
 
 	public int getDeparmentId() {
